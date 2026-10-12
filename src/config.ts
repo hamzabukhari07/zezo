@@ -11,4 +11,5 @@ export const CONFIG = {
   // Creator Attribution
   CREATOR_NAME: "Hamza Bukhari",
   TWITTER_HANDLE: "@hamzabukhari",
+  INSTAGRAM_URL: "https://www.instagram.com/zezo._ai?stkn=MXB1cmpkZjRxeWZ1ZQ%3D%3D&utm_source=qr",
 };
