@@ -89,7 +89,7 @@ export function App() {
   };
 
   return (
-    <div className="relative min-h-screen w-full bg-black text-white flex flex-col justify-between items-center overflow-hidden selection:bg-white/20 selection:text-white">
+    <div className="relative min-h-[100dvh] w-full bg-black text-white flex flex-col justify-between items-center overflow-x-hidden selection:bg-white/20 selection:text-white px-4 sm:px-6">
       {/* 1. Atmospheric Horizon Sky Glow */}
       <div className="absolute inset-0 horizon-atmosphere pointer-events-none" />
 
@@ -111,51 +111,52 @@ export function App() {
       </div>
 
       {/* Hero Section — Exact Composition of Inspiration */}
-      <main className="relative z-20 w-full max-w-4xl px-6 py-12 flex flex-col items-center text-center my-auto">
+      <main className="relative z-20 w-full max-w-4xl px-2 sm:px-6 py-6 sm:py-12 flex flex-col items-center text-center my-auto">
         {/* Logo above Launching Soon */}
-        <div className="mb-6 relative">
+        <div className="mb-4 sm:mb-6 relative">
           <img
             src="/logo.png"
             alt="ZEZO Logo"
-            className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.8)]"
+            className="w-14 h-14 sm:w-20 sm:h-20 object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.8)]"
           />
         </div>
 
         {/* Top Capsule Badge (Separated) */}
-        <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.12] text-xs sm:text-[13px] text-zinc-300 font-normal tracking-wide backdrop-blur-md mb-8 shadow-sm">
+        <div className="inline-flex items-center justify-center px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full bg-white/[0.06] border border-white/[0.12] text-xs sm:text-[13px] text-zinc-300 font-normal tracking-wide backdrop-blur-md mb-6 sm:mb-8 shadow-sm">
           <span>Launching Soon</span>
         </div>
 
-        {/* Headline with Inline Prominent Voice AI Pill Widget */}
-        <h1 className="text-4xl sm:text-6xl md:text-[68px] font-normal tracking-tight text-white max-w-4xl leading-[1.18] mb-6">
-          <span className="inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-2 align-middle">
-            <span>Tell it what you need</span>
+        {/* Headline with Responsive Inline Voice AI Pill Widget */}
+        <h1 className="text-[30px] xs:text-[34px] sm:text-5xl md:text-6xl lg:text-[68px] font-normal tracking-tight text-white max-w-4xl leading-[1.22] sm:leading-[1.18] mb-5 sm:mb-6">
+          <span>Tell it what </span>
+          <span className="inline-flex items-center gap-2 sm:gap-3 align-middle whitespace-nowrap">
+            <span>you need</span>
             
-            {/* Clean Black Voice AI Pill Widget (No glow, black fill, subtle outline, purple bars) */}
-            <span className="relative inline-flex items-center gap-3 sm:gap-3.5 pl-2 sm:pl-2.5 pr-4 sm:pr-5 py-2 sm:py-2.5 rounded-full bg-black border border-white/[0.14] align-middle select-none my-1 shadow-sm">
+            {/* Clean Black Voice AI Pill Widget */}
+            <span className="inline-flex items-center gap-2 sm:gap-3 pl-1.5 sm:pl-2.5 pr-3 sm:pr-4 py-1 sm:py-2 rounded-full bg-black border border-white/[0.14] align-middle select-none shadow-sm shrink-0">
               {/* Circular Avatar */}
-              <span className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-zinc-900 border border-white/10 p-1 flex items-center justify-center overflow-hidden shrink-0">
+              <span className="w-7 h-7 sm:w-10 sm:h-10 rounded-full bg-zinc-900 border border-white/10 p-0.5 sm:p-1 flex items-center justify-center overflow-hidden shrink-0">
                 <img src="/logo.png" alt="ZEZO" className="w-full h-full object-contain" />
               </span>
 
               {/* Animated Waveform Equalizer (Purple) */}
-              <span className="flex items-center gap-[4px] sm:gap-[5px] h-8 sm:h-9 px-0.5 shrink-0">
-                <span className="w-[3.5px] sm:w-[4.5px] rounded-full bg-[#b3a6e6] voice-bar-1" />
-                <span className="w-[3.5px] sm:w-[4.5px] rounded-full bg-[#b3a6e6] voice-bar-2" />
-                <span className="w-[3.5px] sm:w-[4.5px] rounded-full bg-[#b3a6e6] voice-bar-3" />
-                <span className="w-[3.5px] sm:w-[4.5px] rounded-full bg-[#b3a6e6] voice-bar-4" />
-                <span className="w-[3.5px] sm:w-[4.5px] rounded-full bg-[#b3a6e6] voice-bar-5" />
+              <span className="flex items-center gap-[3px] sm:gap-[5px] h-6 sm:h-8 px-0.5 shrink-0">
+                <span className="w-[3px] sm:w-[4.5px] rounded-full bg-[#b3a6e6] voice-bar-1" />
+                <span className="w-[3px] sm:w-[4.5px] rounded-full bg-[#b3a6e6] voice-bar-2" />
+                <span className="w-[3px] sm:w-[4.5px] rounded-full bg-[#b3a6e6] voice-bar-3" />
+                <span className="w-[3px] sm:w-[4.5px] rounded-full bg-[#b3a6e6] voice-bar-4" />
+                <span className="w-[3px] sm:w-[4.5px] rounded-full bg-[#b3a6e6] voice-bar-5" />
               </span>
             </span>
           </span>
-          <br className="hidden sm:inline" />
-          <span className="block sm:inline mt-2 sm:mt-0">
+          <br className="hidden sm:inline" />{' '}
+          <span className="block sm:inline mt-1 sm:mt-0">
             Let it handle the <span className="font-serif-italic text-zinc-100">work.</span>
           </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-sm sm:text-base text-zinc-400 max-w-lg font-normal leading-relaxed mb-9">
+        <p className="text-xs sm:text-base text-zinc-400 max-w-xs sm:max-w-lg font-normal leading-relaxed mb-6 sm:mb-9 px-2">
           An AI assistant built to help you manage tasks, control your digital environment, and automate everyday workflows from your desktop.
         </p>
 
@@ -209,15 +210,10 @@ export function App() {
       </main>
 
       {/* 3. Celestial Glowing Planet Horizon Arc */}
-      <div 
-        className="planet-horizon"
-        style={{
-          bottom: '-72vh',
-        }}
-      />
+      <div className="planet-horizon -bottom-[62vh] sm:-bottom-[72vh]" />
 
       {/* Footer (Minimal attribution + Instagram) */}
-      <footer className="relative z-20 w-full max-w-5xl px-6 pb-8 pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-mono">
+      <footer className="relative z-20 w-full max-w-5xl px-4 sm:px-6 pb-6 sm:pb-8 pt-3 sm:pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm font-mono">
         <span className="text-zinc-300 tracking-wider">
           Built by <span className="text-white font-medium hover:text-white transition-colors">{CONFIG.CREATOR_NAME}</span>
         </span>
@@ -226,7 +222,7 @@ export function App() {
           href={CONFIG.INSTAGRAM_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.1] text-zinc-300 hover:text-white transition-all duration-200 group text-xs tracking-wide shadow-sm hover:scale-105 active:scale-95"
+          className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.1] text-zinc-300 hover:text-white transition-all duration-200 group text-xs tracking-wide shadow-sm hover:scale-105 active:scale-95"
         >
           <InstagramIcon className="w-3.5 h-3.5 text-zinc-400 group-hover:text-pink-400 transition-colors" />
           <span>Follow on Instagram</span>
